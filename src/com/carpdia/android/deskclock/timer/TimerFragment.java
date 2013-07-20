@@ -425,14 +425,11 @@ public class TimerFragment extends DeskClockFragment
             params.height -= dividerHeight;
             footerView.setLayoutParams(params);
             footerView.setBackgroundResource(R.color.blackish);
-            mTimersList.addFooterView(footerView);
             View headerView = inflater.inflate(R.layout.blank_header_view, mTimersList, false);
             params = headerView.getLayoutParams();
             params.height -= dividerHeight;
             headerView.setLayoutParams(params);
             mTimersList.addHeaderView(headerView);
-        } else {
-            mTimersList.setBackgroundColor(getResources().getColor(R.color.blackish));
         }
 
         mNewTimerPage = v.findViewById(R.id.new_timer_page);
