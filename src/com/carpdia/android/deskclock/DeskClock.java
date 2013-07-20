@@ -136,21 +136,7 @@ public class DeskClock extends Activity implements LabelDialogFragment.TimerLabe
     @Override
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-
-        mSelectedTab = CLOCK_TAB_INDEX;
-        if (icicle != null) {
-            mSelectedTab = icicle.getInt(KEY_SELECTED_TAB, CLOCK_TAB_INDEX);
-        }
-
-        // Timer receiver may ask the app to go to the timer fragment if a timer expired
-        Intent i = getIntent();
-        if (i != null) {
-            int tab = i.getIntExtra(SELECT_TAB_INTENT_EXTRA, -1);
-            if (tab != -1) {
-                mSelectedTab = tab;
-            }
-        }
-        initViews();
+        setContentView(R.layout.main);
         setHomeTimeZone();
     }
 
@@ -190,7 +176,6 @@ public class DeskClock extends Activity implements LabelDialogFragment.TimerLabe
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putInt(KEY_SELECTED_TAB, mActionBar.getSelectedNavigationIndex());
     }
 
     public void clockButtonsOnClick(View v) {
