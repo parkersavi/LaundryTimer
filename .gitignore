@@ -27,3 +27,9 @@ proguard/
 *.ipr
 *.iws
 .idea/
+
+gen/com/carpdia/android/deskclock/R.java
+
+gen/com/carpdia/android/deskclock/R.java
+
+gen/com/carpdia/android/deskclock/BuildConfig.java
